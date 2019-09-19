@@ -21,7 +21,7 @@ char * sum(char *x, char *y)
 	*(sum + lsum + 1) = 0;
 	if (*(sum) == '0')
 	{
-		for (i = 0; i < lsum; i++)
+		for (i = 0; i <= lsum; i++)
 		{
 			*(sum + i) = *(sum + i + 1);
 		}
