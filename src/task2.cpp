@@ -1,7 +1,7 @@
 #include "task2.h"
 #include <math.h>
 
-bool checkPrime(unsigned int value) // - проверка числа на простоту.
+bool checkPrime(unsigned int value) 
 {
 	for (unsigned int i = 2; i <= sqrt(value); i++)
 		if (value%i == 0)
@@ -25,7 +25,7 @@ unsigned long long nPrime(unsigned n)
 	return prime;
 
 }
-// - нахождение n - ого простого числа(в ряду).
+
 unsigned long long nextPrime(unsigned long long value)
 {
 	if (value % 2 == 0) value++;
@@ -35,4 +35,3 @@ unsigned long long nextPrime(unsigned long long value)
 	}
 	return value;
 }
-	// - нахождение ближайшего следующего простого числа к value.
