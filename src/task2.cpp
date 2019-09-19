@@ -28,7 +28,8 @@ unsigned long long nPrime(unsigned n)
 
 unsigned long long nextPrime(unsigned long long value)
 {
-	if (value % 2 == 0) value++;
+	if (value % 2 == 0) value--;
+	value +=2;
 	while (!checkPrime(value))
 	{
 		value += 2;
