@@ -4,9 +4,9 @@
 
 int main()
 {
-	char sss[50];
-	sss[0] = 0;
-	gets_s(sss, 49);
+	char sss[] = "asdf0ghgh0dhhh\0";
+	//sss[0] = 0;
+	//gets_s(sss, 49);
 	char **res = NULL;
 	int n;
 	char ch = '0';
