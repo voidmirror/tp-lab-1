@@ -32,11 +32,7 @@ unsigned long long nPrime(unsigned n)
 
 unsigned long long nextPrime(unsigned long long value)
 {
-	if(checkPrime(value))
-	{
-		return value;
-	}
-	unsigned long long more = value;
+	unsigned long long more = value+1;
 	while (!checkPrime(more))
 	{
 		more++;
