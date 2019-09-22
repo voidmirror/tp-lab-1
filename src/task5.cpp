@@ -1,8 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include "task5.h"
-#include <iostream>
-using namespace std;
+#include<malloc.h>
+#include<string.h>
 
 void split(char ***result, int *N, char *buf, char ch)
 {

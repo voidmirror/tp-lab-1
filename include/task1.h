@@ -3,6 +3,6 @@
 
 unsigned long findValue(unsigned int, unsigned);
 
-int gcd(int a, int b);
+int gcd(int, int);
 
 #endif

@@ -3,12 +3,9 @@
 #include "task1.h"
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
-	unsigned long num = findValue(1, 20);
-	cout << num << '\n';
-	cin.get();
+	unsigned long num = findValue(1, 10);
+	std::cout << num << '\n';
 	return 0;
 }
