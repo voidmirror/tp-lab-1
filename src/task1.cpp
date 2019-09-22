@@ -1,14 +1,13 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include "task1.h"
-#include <math.h>
 
 unsigned long findValue(unsigned int min, unsigned max)
 {
 	unsigned long num = 1;
 	for (int i = min; i < max; i++)
 	{
-		num = (abs(num * i)) / gcd(num, i);
+		num = (num * i) / gcd(num, i);
 	}
 	return num;
 }
