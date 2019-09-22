@@ -8,7 +8,7 @@ unsigned long findValue(unsigned int min, unsigned max)
 	unsigned long num = 1;
 	for (int i = min; i < max; i++)
 	{
-		num = lcm(num, i);
+		num = (abs(num * i)) / gcd(num, i);
 	}
 	return num;
 }
@@ -23,9 +23,4 @@ int gcd(int a, int b)
 		a = t;
 	}
 	return a;
-}
-
-int lcm(int a, int b)
-{
-	return (abs(a * b)) / gcd(a, b);
 }

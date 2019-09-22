@@ -9,5 +9,6 @@ int main()
 {
 	unsigned long num = findValue(1, 20);
 	cout << num << '\n';
+	cin.get();
 	return 0;
 }
