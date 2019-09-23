@@ -1,7 +1,7 @@
 #include "task4.h"
 #include <malloc.h>
 #include <algorithm>
-#include <string>
+#include <string.h>
 
 using namespace std;
 
