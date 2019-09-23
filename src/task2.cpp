@@ -3,12 +3,12 @@
 
 using namespace std;
 
-bool checkPrime(unsigned int value) {
-	for (unsigned int i = 2;i*i <= value;i++) {
-		if (value%i == 0) return 0;
-	}
-	return 1;
-}
+//bool checkPrime(unsigned int value) {
+//	for (unsigned int i = 2;i*i <= value;i++) {
+//		if (value%i == 0) return 0;
+//	}
+//	return 1;
+//}
 
 bool checkPrime(unsigned long long value) { 
 	for (unsigned int i = 2;i*i <= value;i++) {
