@@ -1,15 +1,16 @@
 #include "task4.h"
 #include <malloc.h>
 #include <algorithm>
+#include <string>
 
 using namespace std;
 
 char * sum(char *x, char *y) {
-	int lenX = _msize(x) / sizeof(x[0]);
-	int lenY = _msize(y) / sizeof(y[0]);
+	int lenX = strlen(x);
+	int lenY = strlen(y);
 	int lenRes = max(lenX, lenY) + 1;
-	char *res = (char*)malloc(lenRes * sizeof(char));
-	memset(res, '0', lenRes);
+	char *res = (char*)malloc((lenRes+1) * sizeof(char));
+	for (int i = 0;i < lenRes;i++)res[i] = '0';
 	for (int posRes=lenRes-1,posX = lenX - 1;posX>=0;posRes--,posX--) {
 		res[posRes] = res[posRes] - '0' + x[posX];
 	}
@@ -26,10 +27,11 @@ char * sum(char *x, char *y) {
 	for (int posRes = 0;posRes < lenRes && res[posRes] == '0';leadingZeros++, posRes++);
 	int lenAns = lenRes - leadingZeros;
 	if (lenAns == 0)lenAns = 1;
-	char *ans = (char*)malloc(lenAns * sizeof(char));
+	char *ans = (char*)malloc((lenAns+1) * sizeof(char));
 	for (int posAns = lenAns - 1, posRes = lenRes - 1;posAns>=0 && posRes>=0;posAns--, posRes--) {
 		ans[posAns] = res[posRes];
 	}
+	ans[lenAns] = 0;
 	free(res);
 	return ans;
 }
