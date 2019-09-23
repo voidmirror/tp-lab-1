@@ -1,6 +1,6 @@
 #include "task5.h"
 #include <malloc.h>
-#include <string>
+#include <string.h>
 
 using namespace std;
 
