@@ -6,9 +6,9 @@
 int main()
 {
 	char **substrings = nullptr;
-	uint32_t substringCount = 0;
+	int32_t substringCount = 0;
 	split(&substrings, &substringCount, "A string to split.", ' ');
-	for (uint32_t i = 0; i < substringCount; i++)
+	for (int32_t i = 0; i < substringCount; i++)
 		std::cout << substrings[i] << std::endl;
 
 	return 0;

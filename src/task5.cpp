@@ -3,7 +3,7 @@
 
 #include "task5.h"
 
-void split(char ***substringArray, uint32_t *substringArrayLength, const char *string, char separator)
+void split(char ***substringArray, int32_t *substringArrayLength, const char *string, char separator)
 {
 	std::vector<char> *currentSubstring = new std::vector<char>();
 	std::vector<char *> *substrings = new std::vector<char *>();
