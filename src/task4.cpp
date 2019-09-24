@@ -33,6 +33,7 @@ char *sum(const char *firstString, const char *secondString)
 	{
 		char digit = '0';
 		digit += (*firstStringIterator - '0');
+		digit += overflowFlag ? 1 : 0;
 
 		if (digit > '9')
 		{
@@ -49,6 +50,7 @@ char *sum(const char *firstString, const char *secondString)
 	{
 		char digit = '0';
 		digit += (*secondStringIterator - '0');
+		digit += overflowFlag ? 1 : 0;
 
 		if (digit > '9')
 		{
