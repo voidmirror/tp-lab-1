@@ -10,7 +10,7 @@ bool checkPrime(uint32_t value)
 };
 bool checkPrime64(uint64_t value)
 {
-	for (uint64_t i = 2; i * i < value; i++)
+	for (uint64_t i = 2; i * i <= value; i++)
 		if (value % i == 0)
 			return false;
 
