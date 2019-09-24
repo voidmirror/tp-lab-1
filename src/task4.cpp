@@ -1,4 +1,5 @@
 #include "string.h"
+#include <algorithm>
 #include <vector>
 
 #include "task4.h"
