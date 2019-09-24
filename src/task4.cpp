@@ -46,7 +46,7 @@ char *sum(const char *firstString, const char *secondString)
 		digits->push_back(digit);
 		firstStringIterator--;
 	}
-	while (secondStringIterator >= firstString)
+	while (secondStringIterator >= secondString)
 	{
 		char digit = '0';
 		digit += (*secondStringIterator - '0');
