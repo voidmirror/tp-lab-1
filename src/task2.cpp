@@ -1,5 +1,4 @@
 #include "task2.h"
-#include <vector>
 bool checkPrime(unsigned int value){
 	if (value == 1) return false;
 	for (int i = 2; i <= value / 2; i++){
