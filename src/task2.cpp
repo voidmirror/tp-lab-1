@@ -6,7 +6,9 @@
 #include <math.h>
 bool checkPrime(unsigned int value){
     bool flag = true;
-    for (int i = 2; i < sqrt(value); i += 1) {
+    if (value == 2)
+        return flag;
+    for (int i = 2; i < sqrt(value) + 1; i += 1) {
         if (value % i == 0) {
             flag = false;
         }
