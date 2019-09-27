@@ -1,15 +1,24 @@
 #include <string.h>
-#include <algorithm>
 #include "task4.h"
 
 
 char * sum(char *x, char *y){
-	int len = std::max(strlen(x), strlen(y));
+	int len;
+
+	if (strlen(x) > strlen(y)){
+		len = strlen(x);
+	}
+	else len = strlen(y);
 
 	char *s1 = new char[len + 2];
 	char *s2 = new char[len + 2];
-	memset(s1, 0, len + 2);
-	memset(s2, 0, len + 2);
+
+	for (int i = 0; i <= len + 2; i++){
+		*(s1 + i) = 0;
+	}
+	for (int i = 0; i <= len + 2; i++){
+		*(s2 + i) = 0;
+	}
 
 	strcpy(s1 + len - strlen(x) + 1, x);
 	strcpy(s2 + len - strlen(y) + 1, y);

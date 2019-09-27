@@ -2,7 +2,7 @@
 //
 
 #include <iostream>
-#include "task1.cpp"
+#include "task1.h"
 
 
 using namespace std;

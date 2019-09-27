@@ -3,26 +3,32 @@
 
 void split(char ***result, int *N, char *buf, char ch){
 	*N = 1;
-	
-	int i = 0, c = 1;
-	while (*(buf + i) != '\0'){
+
+	int i = 0;
+	while (*(buf + i) != NULL){
 		if (*(buf + i) == ch) (*N)++;
 		i++;
 	}
-	
-	*result = new char*[*N*sizeof(char*)];
-	char *temp = new char[(strlen(buf) + 1) * sizeof(char)];
 
-	
-	*(*result + 0) = temp;
+	*result = new char*[*N];
+	char *current = new char[strlen(buf) + 1];
 
-	for (int i = 0; i < strlen(buf); i++){
-		*(temp + i) = *(buf+i);
-		if (*(temp + i) == ch){
-			*(temp + i) = '\0';
-			*(*result + c) = temp + i + 1;
-			c++;
+
+	**result = current;
+
+	i = 0;
+	int j = 1;
+
+	while (i < strlen(buf)){
+		*(current + i) = *(buf + i);
+		if (*(current + i) == ch){
+			*(current + i) = NULL;
+			*(*result + (j++)) = current + i + 1;
 		}
+		i++;
 	}
-	temp[strlen(buf)] = '\0';
+
+
+	
+	current[strlen(buf)] = NULL;
 }
