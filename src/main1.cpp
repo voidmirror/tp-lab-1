@@ -1,6 +1,3 @@
-// main1.cpp: определяет точку входа для консольного приложения.
-//
-
 #include <iostream>
 #include "task1.h"
 
