@@ -3,7 +3,7 @@
 //
 #include "task4.h"
 
-int main4(){
+int main(){
     char *x="1488";
     char *y="228";
     char *r = sum(x, y);

@@ -3,9 +3,10 @@
 //
 #include <iostream>
 #include "task2.h"
-int main2(){
+int main(){
     std::cout << checkPrime(3) << '\n';
-    std::cout << nPrime(8) << '\n';
+    std::cout << nPrime(6) << '\n';
+    std::cout << nPrime(500) << '\n';
     std::cout << nextPrime(12) << '\n';
     return 0;
 }

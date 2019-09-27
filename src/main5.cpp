@@ -3,7 +3,7 @@
 //
 #include <iostream>
 #include "task5.h"
-int main5()
+int main()
 {
     char *buf="14,88";
     int N=0;
