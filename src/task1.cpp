@@ -7,7 +7,7 @@ unsigned long findValue(unsigned int min, unsigned max){
 		for (k = min; k <= max; k++){
 			if (i % k != 0) break;
 		}
-		if (k > 20){
+		if (k > max){
 			return i;
 		}
 		i++;
