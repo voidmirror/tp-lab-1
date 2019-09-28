@@ -26,6 +26,7 @@ char *sum(char *x, char *y)
 		if (ind1 == -1 && ind2 == -1)
 		{
 			ans[length] = flag + '0';
+			break;
 		}
 		if (ind1 == -1)
 		{
