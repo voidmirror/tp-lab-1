@@ -4,11 +4,11 @@
 unsigned long long sumPrime(unsigned int hbound)
 {
 	unsigned long long sum = 0;
-	long int i = 1;
-	while(i < hbound)
+	long int i;
+	for (i = 1; i < hbound; i++)
 	{
-		i = nextPrime(i);
-		sum = sum + i;
+		if (checkPrime(i))
+			sum = sum + i;
 	}
 	return sum;
 }

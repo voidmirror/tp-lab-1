@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-int main()
+/*int main()
 {
 	cout << checkPrime(4) <<"\n";
 	cout << checkPrime(17) << "\n";
@@ -10,4 +10,4 @@ int main()
 	cout << "5th prime number = " << nPrime(5) << "\n";
 	cout << "next prime after 7 = " << nextPrime(7) << "\n";
 	cout << "next prime after 0 = " << nextPrime(0) << "\n";
-}
+}*/
