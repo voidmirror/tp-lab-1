@@ -1,5 +1,6 @@
 ﻿#pragma once
-#include <iostream>
+#include <iostream> 
+#include <cmath> 
 
 bool checkPrime(unsigned int value); //проверка числа на простоту.
 unsigned long long nPrime(unsigned n); //нахождение n - ого простого числа(в ряду).
