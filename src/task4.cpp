@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "task4.h"
 
 std::vector<short> V(char *a) {
