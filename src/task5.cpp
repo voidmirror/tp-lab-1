@@ -4,36 +4,42 @@
 #include <iostream>
 using namespace std;
 
-/*void split(char ***result, int *N, char *buf, char ch)
+void split(char ***result, int *N, char *buf, char ch)
 {
-	int i = 0, c = 0, j = 0, k =0;
+	int i = 0, c = 0, j = 0, k = 0, len;
 	while (*(buf + i) != 0)
 	{
 		if (*(buf + i) == ch)
 			c++;
 		i++;
 	}
-	*N = c+1;
 
-	*result = new char*[c+1];
+	*N = c + 1;
+
+	*result = new char*[c + 1];
 	char *s = new char[strlen(buf)];
 
-	while (j < strlen(buf))
+	i = 0;
+	j = 0;
+	k = 0;
+	len = strlen(buf);
+	while (len >= 0)
 	{
-		if (buf[j] != ch)
+		if ((buf[k] != ch) && (buf[k] != 0))
 		{
-			*(s + k) = buf[j];
-			k++;
+			*(s + j) = buf[k];
+			j++;
 		}
-		else
+		if ((buf[k] == ch) || (buf[k] == 0))
 		{
-			*(s + k) = 0;
+			*(s + j) = 0;
+			j = 0;
 			*(*result + i) = s;
 			i++;
-			k = 0;
-			*(s + 0) = 0;
+			s = new char[strlen(buf)];
 		}
-		j++;
+		k++;
+		len--;
 	}
-	
-}*/
+
+}
