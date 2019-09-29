@@ -3,7 +3,9 @@
 bool checkPrime(unsigned int value)
 {
 	bool flag = true;
-	for (int i = 2; i < value; i++)
+	if (value < 2)
+		flag = false;
+	for (int i = 2; i*i <= value; i++)
 	{
 		if (value % i == 0)
 			flag = false;

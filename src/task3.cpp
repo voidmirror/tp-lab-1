@@ -3,11 +3,12 @@
 
 unsigned long long sumPrime(unsigned int hbound)
 {
-	long long int sum = 0;
-	for (long int i = 2; i < hbound; i++)
+	unsigned long long sum = 0;
+	long int i = 1;
+	while(i < hbound)
 	{
-		if (checkPrime(i) == true)
-			sum = sum + i;
+		i = nextPrime(i);
+		sum = sum + i;
 	}
 	return sum;
 }
