@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "task5.h"
 
 void split(char ***result, int *N, char *buf, char ch) {
@@ -7,7 +8,7 @@ void split(char ***result, int *N, char *buf, char ch) {
 		i++;
 	}
 	(*N) = (*N) + 1;
-	char *temp = new char[strlen(buf)];
+	char *temp = new char[i];
 	(*result) = new char*[*N];
 	i = 0;
 	int n = 1;
