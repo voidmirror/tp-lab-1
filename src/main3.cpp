@@ -3,9 +3,8 @@
 #include <iostream>
 
 int main(){
-	unsigned n;
-		std::cin >> n;
-		std::cout << "The sum is " << sumPrime(n) << "\n";
+
+		std::cout << "The sum is " << sumPrime(12) << "\n";
 	
 	return 0;
 }

@@ -19,11 +19,11 @@ unsigned long long nPrime(unsigned n) {
 	unsigned new_n = n;
 	unsigned long long num = 1;
 	while (new_n!= 0) {
-		
+		num += 1;
 		if (checkPrime(num)) {
 			new_n--;
 		}	
-		num += 1;
+		
 	}
 
 	return num;
