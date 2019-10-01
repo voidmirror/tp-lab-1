@@ -8,7 +8,7 @@ unsigned long long sumPrime(unsigned int hbound) {
 	while (true) {
 		new_prime = nextPrime(new_prime);
 		if (new_prime >= hbound) {
-			return sum;
+			return sum - 1;
 		}
 		sum += new_prime;
 	}
