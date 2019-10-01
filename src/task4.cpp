@@ -1,35 +1,12 @@
 #include "task4.h"
 
-char* reverse(char* x, int len) {
-
-	char* res = (char*)malloc(len);
-	for (int i = 0; i <  len; i++) {
-		res[i] = x[len - i - 1];
-	}
-	res[len] = '\0';
-	return res;
-}
 char* sum(char* x, char* y) {
-	char* res;
-	int len1 = 0, len2 = 0;
-	while (x[len1] != '\0') {
-		len1++;
-	}
+	int len1 = strlen(x), len2 = strlen(y);
+	int len = std::max(len1, len2);
+	char* res = (char*)malloc(len + 2);
 
-	while (y[len2] != '\0') {
-		len2++;
-	}
-
-	int len = len1;
-	if (len1 < len2)
-		len = len2;
-
-
-	res = (char*)malloc(len + 2);
-
-	
-	x = reverse(x, len1); 
-	y = reverse(y, len2);
+	std::reverse(x, x+len1); 
+	std::reverse(y, y+len2);
 
 	int i = 0;
 	int cur = 0;
@@ -57,11 +34,16 @@ char* sum(char* x, char* y) {
 	}
 	if (cur > 0) {
 		res[len] = cur + '0';
-		res = reverse(res, len + 1);
+		std::reverse(res, res + len + 1);
+		res[len + 1] = '\0';
 	}
 	else {
-		res  = reverse(res, len);
+		std::reverse(res, res + len);
+		res[len] = '\0';
 	}
 
+	std::reverse(x, x + len1);
+	std::reverse(y, y + len2);
+	
 	return res;
 }

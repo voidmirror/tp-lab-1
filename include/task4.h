@@ -1,4 +1,5 @@
 #pragma once
+#include <algorithm>
 #include <cstdlib>
-char* reverse(char* x, int len);
+#include <string.h>
 char* sum(char* x, char* y);
