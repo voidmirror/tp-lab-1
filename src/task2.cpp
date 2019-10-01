@@ -27,9 +27,9 @@ unsigned long long nPrime(unsigned n) {
 
 unsigned long long nextPrime(unsigned long long value) {
 	while (1) {
+		value += 1;
 		if (checkPrime(value)) {
 			return value;
 		}
-		value += 1;
 	}
 }
