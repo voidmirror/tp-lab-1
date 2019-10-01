@@ -28,7 +28,7 @@ void split(char ***result, int *N, char *buf, char ch) {
         }
         if ((buf[i] == ch) || (buf[i] == '\0')) {
             sub[k] = '\0';
-            *(*result +n) = sub;
+            *(*result + n) = sub;
             k = 0;
             n++;
             sub = new char[strlen(buf)];

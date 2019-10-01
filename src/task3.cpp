@@ -14,7 +14,7 @@ unsigned long long sumPrime(unsigned int hbound) {
         mas[i] = true;
     }
     mas[1] = false;
-    unsigned int sum = 0;
+    unsigned long long sum = 0;
     for (unsigned int i = 2; i < hbound; i++) {
         if (mas[i]) {
             sum += i;
