@@ -14,7 +14,7 @@ unsigned long long sumPrime(unsigned int hbound)
 	for (long long i = 3; i < hbound; i += 2)
 	{
 		for (long long j = 2; j <= sqrt(i); j++)
-			if (value % j == 0)
+			if (i % j == 0)
 			{
 				flag = 1;
 				break;
