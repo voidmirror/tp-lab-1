@@ -8,3 +8,4 @@ using namespace std; // "Пространство имен", чтобы не использовать это перед cou
 /* Прототипы функций */
 
 unsigned long long sumPrime(unsigned int hbound);
+static bool checkPrime(unsigned int value);

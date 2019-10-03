@@ -1,6 +1,6 @@
 #include "task3.h"
 
-bool checkPrime(unsigned int value)
+static bool checkPrime(unsigned int value)
 {
 	for (long long i = 2; i <= sqrt(value); i++)
 		if (value % i == 0)
