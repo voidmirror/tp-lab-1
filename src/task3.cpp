@@ -1,13 +1,5 @@
 #include "task3.h"
 
-static bool checkPrime(unsigned int value)
-{
-	for (long long i = 2; i <= sqrt(value); i++)
-		if (value % i == 0)
-			return false;
-	return true;
-}
-
 unsigned long long sumPrime(unsigned int hbound)
 {
 	unsigned long long sum = 0;
@@ -18,9 +10,17 @@ unsigned long long sumPrime(unsigned int hbound)
 		cout << 0 << endl;
 		return 0;
 	}
+	bool flag = true;
 	for (long long i = 3; i < hbound; i += 2)
 	{
-		if (checkPrime(i))
+		for (long long j = 2; j <= sqrt(i); j++)
+			if (value % j == 0)
+			{
+				flag = 1;
+				break;
+			}
+			flag = 0;
+		if (!flag)
 			sum += i;
 	}
 	cout << sum << endl;
