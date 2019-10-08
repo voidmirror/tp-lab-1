@@ -1,8 +1,11 @@
 bool checkPrime(unsigned int value) {
-	if (value <= 3)
-		return true;
-	else if (value % 2 == 0){
+	if (value <= 1)
 		return false;
+	else if ((value % 2 == 0) && (value != 2)){
+		return false;
+	}
+	else if (value == 2){
+		return true;
 	}
 	else {
 		for (int dev = 3; dev <= value; dev = dev + 2) {
@@ -29,6 +32,10 @@ unsigned long long nPrime(unsigned n) {
 }
 
 unsigned long long nextPrime(unsigned long long value) {
+
+	if (value < 2){
+		return 2;
+	}
 	value++; //смотрим сразу же на следующее число
 	if (value % 2 == 0){
 		value++;
