@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-void main(){
+int main(){
 	char str[]= "Hello_world_my_name_is_Evgeny";
 	char dev = '_';
 	int N = 0;
