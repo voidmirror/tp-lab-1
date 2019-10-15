@@ -18,7 +18,7 @@ include_directories(${COMMON_INCLUDES})
 file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
 
 
-set(SRC_FILES1 ${PROJECT_SOURCE_DIR}/src/task1.cpp)
+set(SRC_FILES1 ${PROJECT_SOURCE_DIR}/src/task1.cpp src/main1.cpp include/task1.h include/task2.h src/task2.cpp src/main2.cpp src/main3.cpp src/main4.cpp src/main5.cpp src/task3.cpp src/task4.cpp src/task5.cpp include/task3.h include/task4.h include/task5.h)
 set(SRC_FILES2 ${PROJECT_SOURCE_DIR}/src/task2.cpp)
 set(SRC_FILES3 ${PROJECT_SOURCE_DIR}/src/task2.cpp
                ${PROJECT_SOURCE_DIR}/src/task3.cpp)              
@@ -33,7 +33,7 @@ add_library(task3_lib ${SRC_FILES3})
 add_library(task4_lib ${SRC_FILES4})
 add_library(task5_lib ${SRC_FILES5})
 
-add_executable(task1 ${PROJECT_SOURCE_DIR}/src/main1.cpp)
+add_executable(task1 ${PROJECT_SOURCE_DIR}/src/main1.cpp src/task1.cpp)
 add_executable(task2 ${PROJECT_SOURCE_DIR}/src/main2.cpp)
 add_executable(task3 ${PROJECT_SOURCE_DIR}/src/main3.cpp)
 add_executable(task4 ${PROJECT_SOURCE_DIR}/src/main4.cpp)
