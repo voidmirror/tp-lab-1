@@ -1,0 +1,11 @@
+#pragma once
+#include <iostream> // библиотека для ввода в консоль 
+#include <math.h> // библиотека, отвечающая за математические операции 
+#include <ctime> // для корректной работы функций srand & rand
+#include <cstring> // строковый тип 
+using namespace std; // "Пространство имен", чтобы не использовать это перед cout & endl каждый раз, например 
+
+/* Прототипы функций */
+
+unsigned long long sumPrime(unsigned int hbound);
+bool checkP(unsigned int value);
