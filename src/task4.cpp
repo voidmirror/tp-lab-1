@@ -4,26 +4,26 @@
 
 using namespace std;
 
-int countSym(char* str) {
-	char sym;
-	int i = 0, counter = 0;
-	do {
-		sym = str[i];
-		i++;
-	} while (sym != '\0');
-	return i - 1;
-}
+//int countSym(char* str) {
+//	char sym;
+//	int i = 0, counter = 0;
+//	do {
+//		sym = str[i];
+//		i++;
+//	} while (sym != '\0');
+//	return i - 1;
+//}
 
 char* reverseChar(char* str) {
 	char *_temp;
 
-	_temp = (char*)malloc(sizeof(char)*countSym(str) + 1);
-	for (int i = 0; i < countSym(str); i++) {
-		_temp[i] = str[countSym(str) - 1 - i];
-		//cout << "str: " << str[countSym(str) - 1 - i] << endl;
+	_temp = (char*)malloc(sizeof(char)*strlen(str) + 1);
+	for (int i = 0; i < strlen(str); i++) {
+		_temp[i] = str[strlen(str) - 1 - i];
+		//cout << "str: " << str[strlen(str) - 1 - i] << endl;
 		//cout << "temp: " << _temp[i] << endl;
 	}
-	_temp[countSym(str)] = '\0';
+	_temp[strlen(str)] = '\0';
 	
 	return _temp;
 }
@@ -33,14 +33,14 @@ char* sum(char *x, char *y) {
 	int amount, sumCounter, ifX;
 	char reserve;
 
-	if (countSym(x) >= countSym(y)) {
-		amount = countSym(x) + 1;
-		sumCounter = countSym(y);
+	if (strlen(x) >= strlen(y)) {
+		amount = strlen(x) + 1;
+		sumCounter = strlen(y);
 		ifX = 1;
 	}
 	else {
-		amount = countSym(y) + 1;
-		sumCounter = countSym(x);
+		amount = strlen(y) + 1;
+		sumCounter = strlen(x);
 		ifX = 0;
 	}
 	result = (char*)malloc(sizeof(char)*amount);

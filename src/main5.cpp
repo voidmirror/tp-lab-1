@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
 	char** stringArr;
-	char buf[] = "123,456,789";
+	char buf[] = "123,456,789,655843,54, ";
 	int N;
 	char ch = ',';
 

@@ -8,11 +8,11 @@ using namespace std;
 int main() {
 	
 
-	char r[100], k[100];
+	char r[1000], k[1000];
 	
 	
 
-	char s[10], m[10];
+	char s[1000], m[1000];
 	gets(m);
 	gets(s);
 	char *poi = r;

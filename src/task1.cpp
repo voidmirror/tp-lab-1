@@ -30,7 +30,7 @@ unsigned long findValue(unsigned int min, unsigned max) {
 			free(dividers);
 			return desired;
 		}
-		check == 1;
+		//check == 1;
 		desired++;
 		//cout << desired << endl;
 	}
