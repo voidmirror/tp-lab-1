@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 #include "task2.h"
 
 int Prime(unsigned long a, unsigned long i)
